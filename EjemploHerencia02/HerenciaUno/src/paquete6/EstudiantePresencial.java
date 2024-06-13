@@ -50,11 +50,17 @@ public class EstudiantePresencial extends Estudiante{
     }
     
     public String toString(){
-        String cadena = String.format("%s"
+        String cadena = String.format("Nombre estudiante: %s\n"
+                + "Apellido estudiante: %s\n"
+                + "Identificacion estudiante: %s\n"
+                + "Edad del estudiante: %d\n"
                 + "Numero creditos: %d\n"
                 + "Costo creditos: %.2f\n"
                 + "Matricula Presencial: %.2f\n", 
-                super.toString(),
+                nombresEstudiante,
+                apellidosEstudiante,
+                identificacionEstudiante,
+                edadEstudiante,
                 numeroCreditos,
                 costoCredito,
                 matriculaPresencial);

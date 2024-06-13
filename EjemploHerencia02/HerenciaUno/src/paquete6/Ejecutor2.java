@@ -12,19 +12,20 @@ import java.util.Scanner;
  * @author reroes
  */
 public class Ejecutor2 {
+
     public static void main(String[] args) {
         // Ingresar estudiante de tipo presencial por teclado.
         // El usuario decide cuando terminar
         // No utilizar super.toString en EstudiantePresencial
         // Debe existir 1 sola impresión de todos los estudiantes presenciales
         // No usar arreglos
-        
+
         // Trabajo clases 13 junio 2024
         Scanner entrada = new Scanner(System.in);
         boolean bandera = true;
         String cadena = "";
-        
-        while(bandera){
+
+        while (bandera) {
             System.out.println("Ingrese nombre");
             String n = entrada.nextLine();
             System.out.println("Ingrese apellido");
@@ -41,16 +42,16 @@ public class Ejecutor2 {
             EstudiantePresencial presencial = new EstudiantePresencial(n, ap, ced, edad, creditos, costo);
             presencial.calcularMatriculaPresencial();
             cadena = String.format("%s%s\n", cadena, presencial);
-            
+
             entrada.nextLine();
             System.out.println("Desea salir, pulse S");
             String opcion = entrada.nextLine();
-            if(opcion.equalsIgnoreCase("S")){
+            if (opcion.equalsIgnoreCase("S")) {
                 bandera = false;
             }
         }
-        
+
         System.out.printf("%s\n", cadena);
-                
+
     }
 }
