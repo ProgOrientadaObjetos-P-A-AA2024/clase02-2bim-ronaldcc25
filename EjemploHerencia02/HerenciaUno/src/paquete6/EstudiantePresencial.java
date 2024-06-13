@@ -12,7 +12,7 @@ public class EstudiantePresencial extends Estudiante{
     }
     
     public EstudiantePresencial(String n, String a, String iden, int ed, 
-            double costo, int creditos){
+            int creditos, double costo){
         super(n, a, iden, ed);
         costoCredito = costo;
         numeroCreditos = creditos;
@@ -47,6 +47,19 @@ public class EstudiantePresencial extends Estudiante{
     // 7. Método obtenerMatriculaPresencial() : Real
     public double obtenerMatriculaPresencial(){
         return matriculaPresencial;
+    }
+    
+    public String toString(){
+        String cadena = String.format("%s"
+                + "Numero creditos: %d\n"
+                + "Costo creditos: %.2f\n"
+                + "Matricula Presencial: %.2f\n", 
+                super.toString(),
+                numeroCreditos,
+                costoCredito,
+                matriculaPresencial);
+        
+        return cadena;
     }
     
 }
