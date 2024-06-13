@@ -1,10 +1,19 @@
 package paquete2;
 
+/*
+Este error nos da porque le hace falta un constructor que se adapte al uno de 
+los constructores que tiene la clase estudiante
+*/
+
 public class EstudianteDistancia extends Estudiante{
     
     private int numeroAsignaturas;
     private double costoAsignatura;
     private double matriculaDistancia;
+
+    public EstudianteDistancia(String n, String a, String iden, int ed) {
+        super(n, a, iden, ed);
+    }
     
     
     // 2.  Método establecerNumeroAsginaturas(numero: Real)

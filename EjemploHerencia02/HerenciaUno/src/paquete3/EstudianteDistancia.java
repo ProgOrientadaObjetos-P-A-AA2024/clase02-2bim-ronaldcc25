@@ -41,5 +41,44 @@ public class EstudianteDistancia extends Estudiante{
     public double obtenerMatriculaDistancia(){
         return matriculaDistancia;
     }
-
+    /*
+    @Override
+    public String toString() {
+        String cadena = String.format("Nombre estudiante: %s\n"
+                + "Apellido estudiante: %s\n"
+                + "Identificacion estudiante: %s\n"
+                + "Edad del estudiante: %d\n"
+                + "Numero de asignaturas: %d\n"
+                + "Valor de asignatura: %.2f\n"
+                + "Valor matricula: %.2f\n",
+                nombresEstudiante,
+                apellidosEstudiante,
+                identificacionEstudiante,
+                edadEstudiante,
+                numeroAsignaturas,
+                costoAsignatura,
+                matriculaDistancia);
+        
+        return cadena;
+    }
+    */
+    @Override
+    public String toString() {
+        String cadena = String.format("%s\n"
+                + "Numero de asignaturas: %d\n"
+                + "Valor de asignatura: %.2f\n"
+                + "Valor matricula: %.2f\n",
+                super.toString(),
+                numeroAsignaturas,
+                costoAsignatura,
+                matriculaDistancia);
+        
+        return cadena;
+    }
+    
+    /*
+    Para presetnar el toString podemos usar tambien el toString de la superClase
+    por lo que esta heredando de dicha 
+    */
+    
 }
